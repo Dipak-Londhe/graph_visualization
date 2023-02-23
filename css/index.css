@@ -1,0 +1,588 @@
+.container {
+    margin: 24px;
+    padding: 44px 48px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
+    box-shadow: rgba(134, 133, 133, 0.1) 0px 1px 3px 0px, rgba(134, 133, 133,  0.06) 0px 1px 2px 0px;
+    
+    border-radius: 4px;
+    margin-top: 16vh;
+    margin-bottom: 44px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.container>h3 {
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.nav {
+    width: 100vw;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    /* gap: 30px; */
+    position: fixed;
+    z-index: 4;
+    background: white;
+    top: 0;
+    left: 0;
+    /* box-shadow: 4px 0px 3px silver; */
+    box-shadow: 3px 0px 4px rgb(236, 235, 235);
+    box-sizing: border-box;
+    
+
+}
+
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+
+div.filter{
+    position:fixed;
+    top:13vh;
+    left:1vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding:44px 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgb(224, 224, 224);
+    color:rgb(130, 130, 130);
+    background: white;
+    z-index:4;
+    border-radius:4px;
+    font-size:18px;
+    float:left;
+
+}
+
+div.color{
+    position:fixed;
+    top:13vh;
+    right:1vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding:44px 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgb(224, 224, 224);
+    color:rgb(130, 130, 130);
+    background: white;
+    z-index:4;
+    border-radius:4px;
+    font-size:18px;
+    float:right;
+
+}
+
+.filter i , .color i{
+    margin-right:14px;
+}
+
+.color i{
+    margin-left:12px;
+}
+
+.graph{
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding:12px 14px;
+    border-radius:4px;
+    margin-left:2vw;
+
+}
+
+.graph i{
+    margin-right:14px;
+}
+
+.filter .i{
+    color:rgb(255, 61, 93);
+}
+
+.chart{
+    margin-right:3vw;
+}
+
+.chart i{
+    margin-right:14px;
+}
+
+
+.toggle{
+
+    visibility:hidden;
+
+}
+
+.togglecolor{
+
+     color:rgb(255, 61, 93);
+
+}
+
+.item{
+    padding-top:15px;
+    padding-bottom:14px;
+    padding-left:24px;
+    padding-right:24px;
+
+
+}
+
+.nav .graph:hover{
+    cursor:pointer;
+}
+
+.nav .graph:active{
+    transform:scale(0.97);
+}
+
+body{
+    /* transition:2s ease; */
+}
+
+.dd i{
+    color:rgb(255, 61, 93);
+    margin-right:5px;
+}
+
+.color .item:nth-child(1) i
+{
+    color:lightgreen;
+}
+
+.color .item:nth-child(2) i
+{
+    color:#d6eaf8;
+}
+
+.color .item:nth-child(3) i
+{
+    color:#f8c471;
+}
+
+
+
+
+a{
+    text-decoration: none;
+}
+
+.filter a{
+
+    color:rgb(130, 130, 130);
+
+}
+
+label{
+    cursor:pointer;
+}
+
+label:hover{
+    color:rgb(255, 61, 93);
+}
+
+
+form{
+    padding:12px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    gap:44px;
+    position: relative;
+}
+ input{
+    background-color: white;
+    color:white;
+    font-size: 0.5px;
+}
+
+label{
+    background-color: white;
+    padding:44px;
+    position:absolute;
+    top:1vh;
+    font-size: 84px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius:4px;
+    color:silver;
+}
+
+button{
+    margin-top:4px;
+    background-color:rgb(255, 61, 93);
+    color:white;
+    font-size:17px;
+    padding:12px 44px;
+    border:none;
+    border-radius:4px;
+}
+
+#h4{
+    position:absolute;
+    bottom:9vh;
+    color:red;
+    display:none;
+}
+
+.img{
+    color:rgb(255, 61, 93);
+    font-style: italic;
+    font-size: 24px;
+}
+
+form div{
+    margin-top:21vh;
+    float:left;
+}
+
+
+.notification{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size:19px;
+    text-align: center;
+    width:fit-content;
+    padding:15px 44px;
+    border-radius:4px;
+    
+}
+
+
+#check{
+    z-index:-2;
+    visibility: hidden;
+}
+
+.file{
+    margin-top:0;
+    margin-bottom:0;
+    position: absolute;
+    top:33vh;
+    color:rgb(255, 61, 93);
+}
+
+
+
+.rotate{
+    transform: rotate(180deg);
+    font-size:19px;
+}
+
+.dd{
+
+    font-size:19px;
+
+}
+
+
+.item:hover{
+    background-color:rgb(248, 244, 244);
+    cursor:pointer;
+}
+
+form button:hover{
+    cursor:pointer;
+}
+
+
+
+
+
+@media (max-width:550px)
+{
+    .container {
+margin: 5px;
+margin-top: 14vh;
+
+    padding: 14px 18px;
+    margin-bottom: 37px;
+
+}
+
+.container>h2 {
+
+font-size:16px;
+}
+
+
+.nav {
+
+padding: 18px 6px;
+justify-content:space-evenly; 
+
+}
+
+
+
+.info {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid rgb(255, 61, 93);
+gap: 10px;
+padding: 12px 44px;
+float: left;
+border-radius: 4px;
+text-align: center;
+}
+
+div.filter{ 
+top:13vh;
+left:2vw;
+padding:19px 16px;
+font-size:18px;
+
+}
+
+
+
+div.color{
+position:fixed;
+top:13vh;
+right:2vw;
+padding:19px 16px;
+font-size:18px;
+
+
+}
+
+.filter i , .color i{
+margin-right:11px;
+}
+
+.color i{
+margin-left:11px;
+}
+
+
+
+.graph i{
+margin-right:14px;
+}
+
+.filter .i{
+color:rgb(255, 61, 93);
+}
+
+.chart{
+margin-right:3vw;
+}
+
+.chart i{
+margin-right:14px;
+}
+
+
+.toggle{
+
+visibility:hidden;
+
+}
+
+.togglecolor{
+
+ color:rgb(255, 61, 93);
+
+}
+
+.item{
+padding-top:13px;
+
+
+}
+
+form{
+
+    padding:12px;
+   
+
+}
+ input{
+    background-color: white;
+    color:white;
+    font-size: 0.001px;
+}
+
+label{
+    background-color: white;
+    padding:64px;
+    position:absolute;
+    top:1vh;
+    font-size: 94px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius:4px;
+    color:silver;
+}
+
+
+
+button{
+    margin-top:44px;
+    font-size:16px;
+    padding:12px 64px;
+}
+
+
+
+.img{
+    font-size: 19px;
+}
+
+
+
+.item:hover{
+    background-color:rgb(248, 244, 244);
+    
+}
+
+.item:active{
+    transition:2s;
+    transform:scale(0.99);
+
+}
+
+
+#h4{
+
+    bottom:7vh;
+   
+}
+
+.file{
+    margin-top:0;
+    margin-bottom:0;
+    position: absolute;
+    top:37vh;
+    color:rgb(255, 61, 93);
+}
+
+
+
+
+
+}
+
+@media (max-width:282px)
+{
+
+    button{
+    margin-top:44px;
+    font-size:16px;
+    padding:12px 44px;
+    }
+
+}
+
+@media(max-width:300px)
+{
+
+    .nav{
+        font-size: 14px;
+    }
+
+    div.filter{ 
+top:12vh;
+left:1vw;
+padding:16px 13px;
+
+}
+
+
+
+div.color{
+top:12vh;
+right:1vw;
+padding:16px 13px;
+
+}
+
+
+
+}
+
+@media (max-width:300px)
+{
+    
+div.filter{ 
+    font-size:16px;
+}
+
+div.color{
+    font-size:16px;
+}
+
+
+}
+
+body {
+    background-color: rgb(251, 251, 250);
+}
+
+/*
+.container{
+    background: rgb(113, 113, 113);
+}
+
+.nav{
+    background: rgb(113, 113, 113) ;
+}
+
+.graph , .chart{
+    background:rgb(194, 194, 194) ;
+}
+
+   div.filter , div.color{
+    background:rgb(194, 194, 194) ;
+    color:rgb(47, 47, 47);
+}
+
+ .filter a{
+    color:rgb(47, 47, 47);
+ }
+
+ label{
+    background-color: rgb(194, 194, 194);
+ }
+
+ label i{
+    color:rgb(61, 61, 61);
+ }
+
+ h3{
+    color:white;
+ } */
+

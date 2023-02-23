@@ -1,0 +1,651 @@
+.container {
+    margin: 24px;
+    padding: 24px 24px;
+    box-shadow: rgba(134, 133, 133, 0.1) 0px 1px 3px 0px, rgba(134, 133, 133,  0.06) 0px 1px 2px 0px;
+    border-radius: 4px;
+    margin-top: 16vh;
+    margin-bottom: 24px;
+    background: white; 
+}
+
+.container>h2 {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nodes {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nodes>.level2,
+.nodes>.level3 {
+    position: relative;
+    margin-top: 10rem;
+    width: 90%;
+}
+
+.nodes>.level1 {
+    position: relative;
+    width: 90%;
+}
+
+.level1,
+.level2,
+.level3 {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 44px;
+    z-index: 2;
+
+}
+
+.level1 div,
+.level2 div,
+.level3 div {
+
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+}
+
+
+
+
+.cnr , .snr , .rnr{
+    color:white;
+    opacity:0;
+    position:absolute;
+    font-size:1px;
+    box-sizing:border-box;
+}
+
+.c{
+     background-color: lightgreen;
+     color:white;
+}
+
+.r{
+
+    background-color: #d6eaf8;
+    color:white;
+
+}
+
+.s{
+
+    background-color: #f8c471;
+    color:white;
+
+}
+
+
+.nav {
+    width: 100vw;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    position: fixed;
+    z-index: 4;
+    background: white;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 0px 4px rgb(236, 235, 235);
+    box-sizing: border-box;
+    
+
+}
+
+body {
+    background-color: rgb(251, 251, 250);
+}
+
+
+
+.nav button {
+    background-color: rgb(255, 61, 93);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    transition: 0.6s ease;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.nav button:hover {
+    background-color: white;
+    box-shadow: 1px 1px 1px rgb(255, 61, 93), -1px -1px 1px rgb(255, 61, 93);
+    color: rgb(255, 61, 93);
+
+}
+
+.nav button:active {
+    transform: scale(0.99);
+}
+
+
+.item:hover{
+    background-color:rgb(248, 244, 244);
+}
+
+.level1 div,
+.level2 div,
+.level3 div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 61, 93);
+    gap: 10px;
+    padding: 12px 44px;
+    float: left;
+    border-radius: 4px;
+    text-align: center;
+}
+
+div.filter{
+    position:fixed;
+    top:13vh;
+    left:1vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding:44px 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgb(224, 224, 224);
+    color:rgb(130, 130, 130);
+    background: white;
+    z-index:4;
+    border-radius:4px;
+    font-size:18px;
+    float:left;
+
+}
+
+div.color{
+    position:fixed;
+    top:13vh;
+    right:1vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding:44px 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgb(224, 224, 224);
+    color:rgb(130, 130, 130);
+    background: white;
+    z-index:4;
+    border-radius:4px;
+    font-size:18px;
+    float:right;
+
+}
+
+.filter i , .color i{
+    margin-right:14px;
+}
+
+.color i{
+    margin-left:12px;
+}
+
+.graph{
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding:12px 14px;
+    border-radius:4px;
+    margin-left:2vw;
+
+}
+
+.graph i{
+    margin-right:14px;
+}
+
+.filter .i{
+    color:rgb(255, 61, 93);
+}
+
+.chart{
+    margin-right:3vw;
+}
+
+.chart i{
+    margin-right:14px;
+}
+
+
+.toggle{
+
+    visibility:hidden;
+
+}
+
+.togglecolor{
+
+     color:rgb(255, 61, 93);
+
+}
+
+.item{
+    padding-top:15px;
+    padding-bottom:14px;
+    padding-left:24px;
+    padding-right:24px;
+
+
+}
+
+.item:hover{
+    background-color:rgb(248, 244, 244);
+}
+
+.nav .graph:hover{
+    cursor:pointer;
+}
+
+.nav div:active{
+    transform:scale(0.97);
+}
+
+
+
+.dd i{
+    color:rgb(255, 61, 93);
+    margin-right:5px;
+}
+
+.color .item:nth-child(1) i
+{
+    color:lightgreen;
+}
+
+.color .item:nth-child(2) i
+{
+    color:#d6eaf8;
+}
+
+.color .item:nth-child(3) i
+{
+    color:#f8c471;
+}
+
+
+.c{
+     background-color: lightgreen;
+     color:white;
+}
+
+.r{
+
+    background-color: #d6eaf8;
+    color:white;
+
+}
+
+.s{
+
+    background-color: #f8c471;
+    color:white;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.filter a{
+
+    color:rgb(130, 130, 130);
+ 
+
+}
+
+.image{
+
+    box-shadow: rgb(255, 61, 93) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding:12px 14px;
+    border-radius:4px;
+    
+}
+
+.image a{
+    color:rgb(255, 61, 93);
+}
+
+.image i{
+    margin-left:14px;
+}
+
+
+
+
+.item:hover{
+    background-color:rgb(248, 244, 244);
+    cursor:pointer;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+
+@media (min-width:190px) and (max-width:600px)
+{
+
+    body{
+        overflow-x:hidden;
+    }
+
+   
+    .container {
+        margin: 5px;
+        padding: 12px 12px;
+        margin-top: 14vh;
+        padding-bottom:140px;
+    }
+    
+    .container>h2 {
+        
+        font-size:16px;
+    }
+    
+    
+    .nodes>.level2,
+    .nodes>.level3 {
+        width: 98%;
+        margin-top: 4rem;
+        
+    }
+
+    
+    .nodes>.level1 {
+        width: 98%;
+    }
+    
+    .level1,
+    .level2,
+    .level3 {
+    
+
+        gap: 37px;
+        
+    
+    }
+
+   
+  
+    
+    .level1 div,
+    .level2 div,
+    .level3 div {
+    
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 13px;
+    
+    }
+    
+    
+    
+    
+    
+    .nav {
+        
+        padding: 18px 6px;
+        justify-content:space-evenly; 
+    
+    }
+    
+    
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(255, 61, 93);
+        gap: 10px;
+        padding: 12px 44px;
+        float: left;
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    div.filter{ 
+        top:13vh;
+        left:2vw;
+        padding:19px 16px;
+        /* font-size:16px; */
+    
+    }
+
+ 
+    
+    div.color{
+        position:fixed;
+        top:13vh;
+        right:2vw;
+        padding:19px 16px;
+        
+       
+    
+    }
+    
+    .filter i , .color i{
+        margin-right:11px;
+    }
+    
+    .color i{
+        margin-left:11px;
+    }
+    
+  
+    
+    .graph i{
+        margin-right:14px;
+    }
+    
+    .filter .i{
+        color:rgb(255, 61, 93);
+    }
+    
+    .chart{
+        margin-right:3vw;
+    }
+    
+    .chart i{
+        margin-right:14px;
+    }
+    
+    
+    .toggle{
+    
+        visibility:hidden;
+    
+    }
+    
+    .togglecolor{
+    
+         color:rgb(255, 61, 93);
+    
+    }
+    
+    .item{
+        padding-top:13px;
+    
+    
+    }
+    
+   
+  
+    
+    .image{
+    
+        /* box-shadow: none; */
+        padding:12px 14px;
+        border-radius:4px;        
+    }
+    
+    .image a{
+        color:rgb(255, 61, 93);
+    }
+    
+    .image i{
+        margin-left:0;
+        font-size: 18px;
+        
+    }
+
+    .image span{
+        display: none;
+    }
+    
+    
+}
+
+
+
+@media (max-width:300px)
+{
+    
+div.filter{ 
+    font-size:16px;
+}
+
+div.color{
+    font-size:16px;
+}
+
+
+}
+
+
+@media (max-width:282px)
+{
+
+    button{
+    margin-top:44px;
+    font-size:16px;
+    padding:12px 44px;
+    }
+
+}
+
+@media(max-width:270px)
+{
+
+    .nav{
+        font-size: 14px;
+    }
+
+    div.filter{ 
+top:12vh;
+left:1vw;
+padding:14px 12px;
+
+}
+
+
+
+div.color{
+top:12vh;
+right:1vw;
+padding:14px 12px;
+
+}
+
+.img{
+font-size:11px;
+}
+
+}
+
+
+
+@media(max-width:250px)
+{
+
+    .nav{
+        font-size: 13px;
+    }
+
+    .nav .image i{
+        font-size: 14px;
+    }
+
+    .nav .image {
+        font-size: 14px;
+        padding:8px 8px;
+    }
+
+    .nav .graph i{
+
+        display: none;
+    }
+
+    div.filter{ 
+top:12vh;
+left:1vw;
+padding:14px 12px;
+
+}
+
+
+
+div.color{
+top:12vh;
+right:1vw;
+padding:14px 12px;
+
+}
+
+.img{
+font-size:11px;
+}
+
+}
